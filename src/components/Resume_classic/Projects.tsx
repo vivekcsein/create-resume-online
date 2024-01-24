@@ -17,7 +17,7 @@ interface projectsList {
 const Projects = ({ propData }: ProjectsProps) => {
   const { title, projectsList } = propData;
   return (
-    <section className="w-full bg-gray-300 dark:bg-orange-700 px-6 py-3">
+    <section className="w-full px-6 py-3">
       <h2 className="heading">{title}:-</h2>
       <ul className="mt-2 flex flex-col-reverse">
         {projectsList.map((item: projectsList) => {

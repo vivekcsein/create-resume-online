@@ -1,4 +1,4 @@
-const endpoint = "";
+const endpoint = "https://vivekcsein.github.io/githost/api/vivekcse/resume_vivekcse.json";
 
 const fetchAPI = async (endpoint: string) => {
     try {

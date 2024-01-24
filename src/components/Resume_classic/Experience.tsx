@@ -25,12 +25,12 @@ interface title {
 
 const Experience = ({ propData }: ExperienceProps) => {
   return (
-    <section className="w-full px-6 py-3   bg-green-600">
+    <section className="w-full px-6 py-3   ">
       <h2 className="heading">{propData.title}:-</h2>
       <ul className="flex flex-col-reverse">
         {propData.companies?.map((Company) => {
           return (
-            <li className="my-2">
+            <li className="my-2" key={Company.id}>
               <div className="flex flex-row gap-1 items-end">
                 <h2 className="headingItalic">{Company.companyName}</h2>
                 {","}
@@ -39,7 +39,7 @@ const Experience = ({ propData }: ExperienceProps) => {
               <ul>
                 {Company.designations.map((item: designations) => {
                   return (
-                    <li>
+                    <li key={item.id}>
                       <div className="flex justify-between ml-5">
                         <p>{item.title}</p>
                         <p> {item.duration}</p>
@@ -47,7 +47,7 @@ const Experience = ({ propData }: ExperienceProps) => {
                       <ul className="">
                         {item.desc.map((des: title) => {
                           return (
-                            <li className="list-disc ml-12  para">
+                            <li className="list-disc ml-12  para" key={des.id}>
                               {des.title}
                             </li>
                           );

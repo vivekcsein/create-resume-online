@@ -1,35 +1,27 @@
 import React from "react";
 // import { resumeData } from "../../data";
-import Header from "./template/Header";
-import Experience from "./template/Experience";
-import Projects from "./template/Projects";
-import Skills from "./template/Skills";
-import SkillSet from "./template/SkillSet";
-import Footer from "./template/Footer";
-import { getResumeAPI } from "@/libs/resumeAPI";
-
-// import Header from "./classic/Header";
-// import About from "./classic/Aboutus";
-// import Skills from "./classic/Skills";
-// import Experience from "./classic/Experience";
-// import Education from "./classic/Education";
-// import Projects from "./classic/Projects";
+import Header from "./Resume_classic/Header";
+import Experience from "./Resume_classic/Experience";
+import Projects from "./Resume_classic/Projects";
+// import Skills from "./Resume_classic/Skills";
+import SkillSet from "./Resume_classic/SkillSet";
+import Footer from "./Resume_classic/Footer";
+import { getResumeAPI } from "../libs/resumeAPI";
 
 const Resume = async () => {
   const apiResumeData = getResumeAPI();
   const resumeData = await apiResumeData;
+
   return (
-    <div className="bg-gray-100 dark:bg-gray-700 m-w-[300px] max-w-[1000px] m-auto">
+    <div className="bg-gray-100 dark:bg-blue-700 m-w-[300px] max-w-[1000px] sm:scale-100 text-sm md:text-xl m-auto">
       <Header propData={resumeData.Heading} />
       <SkillSet propData={resumeData.skills} />
-      <div className="w-full flex gap-2">
-        <div className="w-full">
-          {/* <Skills propData={resumeData.skills} /> */}
-          <Projects propData={resumeData.projects} />
-        </div>
+      <div className="w-full flex gap-2 md:flex-row flex-col">
+        <Projects propData={resumeData.projects} />
         <Experience propData={resumeData.Experience} />
       </div>
       <Footer propData={resumeData.Heading} />
+      <h2 className=" flex justify-center  ">visit for online portfolio</h2>
     </div>
   );
 };
