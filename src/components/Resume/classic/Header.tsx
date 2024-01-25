@@ -10,12 +10,6 @@ interface Headerprops {
   };
 }
 
-type infoArr = {
-  id: string;
-  icon: string;
-  value?: string;
-  href?: string;
-};
 const Header = ({ propData }: Headerprops) => {
   const { name, title, desc, info, socialMedia } = propData;
   const variant = ["text-red-500", "text-green-500", "text-gray-500"];

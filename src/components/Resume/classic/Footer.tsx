@@ -11,12 +11,6 @@ type FooterData = {
   };
 };
 
-type infoArr = {
-  id: string;
-  icon: string;
-  value?: string;
-  href?: string;
-};
 const Footer = ({ propData }: FooterData) => {
   const { info, socialMedia } = propData;
   const arr: Array<infoArr> = [];

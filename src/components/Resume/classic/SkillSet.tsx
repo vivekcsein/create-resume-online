@@ -8,17 +8,6 @@ type SkillsProps = {
   };
 };
 
-interface skillset {
-  id: string;
-  title: string;
-  value: Array<title>;
-}
-
-interface title {
-  id: string;
-  title: string;
-  href: string;
-}
 const SkillSet = ({ propData }: SkillsProps) => {
   const arr: Array<title> = [];
   propData.skillset.map((item) => {
@@ -26,8 +15,6 @@ const SkillSet = ({ propData }: SkillsProps) => {
       arr.push(item);
     });
   });
-
-  console.log(arr);
 
   return (
     <section className="w-full px-6 py-3  bg-green-600">

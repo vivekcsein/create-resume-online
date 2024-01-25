@@ -6,23 +6,6 @@ interface ExperienceProps {
   };
 }
 
-interface companies {
-  id: string;
-  companyName: string;
-  address: string;
-  designations: Array<designations>;
-}
-
-interface designations extends title {
-  duration: string;
-  desc: Array<title>;
-}
-
-interface title {
-  id: string;
-  title: string;
-}
-
 const Experience = ({ propData }: ExperienceProps) => {
   return (
     <section className="w-full px-6 py-3   ">

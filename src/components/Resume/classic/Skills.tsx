@@ -8,18 +8,6 @@ type SkillsProps = {
   };
 };
 
-interface skillset {
-  id: string;
-  title: string;
-  value: Array<title>;
-}
-
-interface title {
-  id: string;
-  title: string;
-  href: string;
-}
-
 const Skills = ({ propData }: SkillsProps) => {
   return (
     <section className="w-full px-6 py-3 ">

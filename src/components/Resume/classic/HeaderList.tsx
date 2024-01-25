@@ -11,12 +11,7 @@ import { FaYoutube } from "react-icons/fa";
 type HeaderListProps = {
   item: infoArr;
 };
-type infoArr = {
-  id: string;
-  icon: string;
-  value?: string;
-  href?: string;
-};
+
 const HeaderList = ({ item }: HeaderListProps) => {
   const iconFinder = (icon: string) => {
     switch (icon) {

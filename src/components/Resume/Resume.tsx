@@ -1,15 +1,14 @@
 import React from "react";
-// import { resumeData } from "../../data";
-import Header from "./Resume_classic/Header";
-import Experience from "./Resume_classic/Experience";
-import Projects from "./Resume_classic/Projects";
-// import Skills from "./Resume_classic/Skills";
-import SkillSet from "./Resume_classic/SkillSet";
-import Footer from "./Resume_classic/Footer";
-import { getResumeAPI } from "../libs/resumeAPI";
+import Link from "next/link";
+import Header from "./classic/Header";
+import Experience from "./classic/Experience";
+import Projects from "./classic/Projects";
+import SkillSet from "./classic/SkillSet";
+import Footer from "./classic/Footer";
+import { getResumeAPI } from "../../libs/resumeAPI";
 
 const Resume = async () => {
-  const apiResumeData = getResumeAPI();
+  const apiResumeData: Promise<ResumeData> = getResumeAPI();
   const resumeData = await apiResumeData;
 
   return (
@@ -21,7 +20,13 @@ const Resume = async () => {
         <Experience propData={resumeData.Experience} />
       </div>
       <Footer propData={resumeData.Heading} />
-      <h2 className=" flex justify-center  ">visit for online portfolio</h2>
+      <Link
+        href={"https://vivekcsein.github.io/resume/"}
+        target="_blank"
+        className="cursor-pointer"
+      >
+        <h2 className=" flex justify-center  ">visit for online portfolio</h2>
+      </Link>
     </div>
   );
 };

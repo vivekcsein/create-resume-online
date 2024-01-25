@@ -1,5 +1,4 @@
-import Resume from "@/components/Resume";
-import Image from "next/image";
+import Resume from "../components/Resume/Resume";
 
 export default function Home() {
   return (

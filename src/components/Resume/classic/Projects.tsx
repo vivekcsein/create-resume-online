@@ -7,13 +7,6 @@ type ProjectsProps = {
   };
 };
 
-interface projectsList {
-  name: string;
-  href: string;
-  desc: string;
-  client: string;
-}
-
 const Projects = ({ propData }: ProjectsProps) => {
   const { title, projectsList } = propData;
   return (
